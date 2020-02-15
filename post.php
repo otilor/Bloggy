@@ -36,13 +36,25 @@
 		$comment = mysqli_fetch_all($comment_result, MYSQLI_ASSOC);
 
 		mysqli_free_result($comment_result);
-		mysqli_close($conn);
-
+		
+		if(isset($_POST["delete_post"])){
+    
+			$delete_post_sql = "DELETE FROM post WHERE post_id = $id";
+			if(mysqli_query($conn, $delete_post_sql)){
+				echo "Post deleted!";
+				header("location: index.php");
+			}
+			else{
+				echo "Failed to delete!";
+				
+			}
+			
+		}
 		
 	}
 	
 
-
+	mysqli_close($conn);
 ?>
 
 <!DOCTYPE html>
@@ -76,6 +88,11 @@
 		<div class="home_content">
 			<div class="post_category trans_200"><a href="#" class="trans_200">sport</a></div>
 			<div class="post_title"><?php echo $post["post_title"]?></div>
+			<form action = "post.php?id=<?php echo $post["post_id"]?>" method = "post">
+			
+			<button class = "btn btn-primary" name = "delete_post" style = "cursor:grab">Delete Post</button>
+			</div>
+			</form>
 		</div>
 	</div>
 	
