@@ -1,5 +1,5 @@
 # Bloggy
-Simple Blog that allows you to create, read, update and delete posts.
+A Simple Blog that allows you to create, read, update and delete posts.
 It was designed by Gariel Akinyosoye
 
 It is currently hosted at codespot.gq
