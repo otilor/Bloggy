@@ -101,32 +101,7 @@ include("auth/server.php");
 					
 					<!-- Similar Posts -->
 					<div class="similar_posts_container">
-						<div class="container">
-							<div class="row d-flex flex-row align-items-end">
-
-								<!-- Similar Post -->
-								<div class="col-lg-3 col-md-6 similar_post_col">
-									<div class="similar_post trans_200">
-										<a href="post.php">How Did van Gogh’s Turbulent Mind Depict One of the Most</a>
-									</div>
-								</div>
-
-								<!-- Similar Post -->
-								<div class="col-lg-3 col-md-6 similar_post_col">
-									<div class="similar_post trans_200">
-										<a href="post.php">How Did van Gogh’s Turbulent Mind Depict One of the Most</a>
-									</div>
-								</div>
-
-								<!-- Similar Post -->
-								<div class="col-lg-3 col-md-6 similar_post_col">
-									<div class="similar_post trans_200">
-										<a href="post.php">How Did van Gogh’s Turbulent Mind Depict One of the Most</a>
-									</div>
-								</div>
-
-							</div>
-						</div>
+						<?php include("templates/similar_post_1.php")?>
 						
 						<div class="home_slider_next_container">
 							<div class="home_slider_next" style="background-image:url(images/home_slider_next.jpg)">

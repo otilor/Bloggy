@@ -17,5 +17,3 @@ How does it work 😶?
 Requirements for using Bloggy
 A PC, obviously
 Internet Connection, like seriously?
-
-
