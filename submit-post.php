@@ -39,9 +39,7 @@
 			$email = mysqli_real_escape_string($conn, $_POST["email"]);
 			$post_title = mysqli_real_escape_string($conn, $_POST["post_title"]);
 			$post_content = mysqli_real_escape_string($conn, $_POST["post_content"]);
-
-
-			$sql = "INSERT INTO post(email, post_title, post_content) VALUES('$email','$post_title', '$post_content')";
+			$sql = "INSERT INTO post(post_title, post_content) VALUES($post_title', '$post_content')";
 
 			if(mysqli_query($conn, $sql)){
 				header("Location: index.php");
@@ -106,8 +104,7 @@
 								
 								<form action="submit-post.php" method = "post">
 									<!--<input type="text" class="contact_input contact_input_name" placeholder="Your Name" required="required">-->
-									<input type="text" class="contact_input contact_input_email" placeholder="Your Email" name = "email">
-									<div class="red-text"><?php echo $errors["email"];?></div>
+									
 
 									<input type="text" class="contact_input contact_input_email" placeholder="Post Title" name = "post_title">
 									<div class="red-text"><?php echo $errors["post_title"];?></div>
