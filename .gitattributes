@@ -1,5 +1,5 @@
 * text=auto
-*.css linguist-vendored
+*.css linguist-language = false
 *.scss linguist-vendored
 *.js linguist-vendored
 *.html linguist-vendored
